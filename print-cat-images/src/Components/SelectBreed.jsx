@@ -20,8 +20,7 @@ const SelectBreed = ( { setBreedID } ) => {
   return (
     <div>
         <form>
-            <select onClick={ handleChange }>
-                <option value='empty'> Select Breed </option>
+            <select onChange={ handleChange }>
                 {breedList.map((breed)=>{
                     return(
                         <option 

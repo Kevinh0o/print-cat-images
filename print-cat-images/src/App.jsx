@@ -18,7 +18,6 @@ function App() {
       <SelectBreed setBreedID = { setBreed } />
       { breed }
       <Image id={ breed } />
-
     </div>
   )
 }

@@ -1,3 +1,5 @@
+import './Image.css'
+
 import { useEffect, useState } from "react"
 
 const Image = ( id ) =>{
@@ -8,18 +10,17 @@ const Image = ( id ) =>{
     useEffect(() => {
         async function fetchData(){
             const res = await fetch(url)
-            const data = res.json()
+            const [data] = await res.json()
             setImage(data)
+            console.log(data)
         }
         fetchData()
-        console.log(image)
-        const { id } = image
-        console.log(id)
     }, [id] )
 
   return (
 
     <div>
+      <img src={image.url} className='img' />
     </div>
   )
 }
