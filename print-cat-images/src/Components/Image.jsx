@@ -12,7 +12,6 @@ const Image = ( id ) =>{
             const res = await fetch(url)
             const [data] = await res.json()
             setImage(data)
-            console.log(data)
         }
         fetchData()
     }, [id] )
