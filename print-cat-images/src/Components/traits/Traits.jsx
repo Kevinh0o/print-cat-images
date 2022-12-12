@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react"
+import Stats from "./Stats"
 
 const Traits = ( id ) => {
 
     const url = 'https://api.thecatapi.com/v1/breeds/' + id.id
     const [breed, setBreed] = useState({})
+
+    const statsChange = () =>{
+        const res = breed
+        return res
+    }
 
     useEffect(() => {
         async function fetchData(){
@@ -13,8 +19,8 @@ const Traits = ( id ) => {
         }    
         fetchData()
         console.log(breed)
+        statsChange()
     }, [id] )
-
 
   return (
 
@@ -28,8 +34,12 @@ const Traits = ( id ) => {
         <p>
             {breed.temperament}
         </p>
-        <a href={breed.wikipedia_url}> Learn more! </a>
-            
+        <div>
+            <Stats statsChange={ statsChange() }/>
+        </div>
+        <a href={breed.wikipedia_url}> 
+            Learn more! 
+        </a>
     </div>
   )
 }

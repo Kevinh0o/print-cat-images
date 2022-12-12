@@ -18,8 +18,11 @@ function App() {
     <div className="App">
 
       <SelectBreed setBreedID = { setBreed } />
+      
       <Image id={ breed } />
+
       <Traits id={ breed } />
+
     </div>
   )
 }
