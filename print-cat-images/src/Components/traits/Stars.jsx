@@ -1,6 +1,9 @@
 import { useEffect } from "react"
 import { useState } from "react"
 
+import './Stars.css'
+import cat from './cat-solid.svg'
+
 
 function Stars( value ) {
 
@@ -12,13 +15,13 @@ function Stars( value ) {
 
   return (
     <div>
-        <>
-            {stars > 0 && <> # </>}
-            {stars > 1 && <> # </>}
-            {stars > 2 && <> # </>}
-            {stars > 3 && <> # </>}
-            {stars > 4 && <> # </>}
-        </>
+        <div className="container">
+            {stars > 0 && <img src={cat} className='cat'/>}
+            {stars > 1 && <img src={cat} className='cat'/>}
+            {stars > 2 && <img src={cat} className='cat'/>}
+            {stars > 3 && <img src={cat} className='cat'/>}
+            {stars > 4 && <img src={cat} className='cat'/>}
+        </div>
     </div>
   )
 }

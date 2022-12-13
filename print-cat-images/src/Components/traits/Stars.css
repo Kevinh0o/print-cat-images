@@ -1,0 +1,13 @@
+.cat{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.container{
+    height: 20px;
+
+    background-color: rgb(255, 226, 226);
+    border-radius: 10px;
+    border: 1px solid rgb(219, 219, 219);
+    padding: 5px;
+}

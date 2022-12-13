@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 
+import './select.css'
+
 const SelectBreed = ( { setBreedID } ) => {
     const url = 'https://api.thecatapi.com/v1/breeds'
     const [breedList, setBreedList] = useState([])
@@ -20,7 +22,8 @@ const SelectBreed = ( { setBreedID } ) => {
   return (
     <div>
         <form>
-            <select onChange={ handleChange }>
+            <select onChange={ handleChange } className='select'>
+                <option placeholder="select"></option>
                 {breedList.map((breed)=>{
                     return(
                         <option 

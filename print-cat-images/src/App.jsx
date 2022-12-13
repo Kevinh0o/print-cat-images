@@ -15,14 +15,27 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="app">
+      <div className='content'>
 
       <SelectBreed setBreedID = { setBreed } />
+      { breed == '' &&
+        <>
+          Select Breed. ^
+        </> 
+      }
+
+      { breed != '' && 
+        <>
+          <Image id={ breed } />
+
+          <Traits id={ breed } />
+        </>
+      }
       
-      <Image id={ breed } />
 
-      <Traits id={ breed } />
 
+      </div>
     </div>
   )
 }

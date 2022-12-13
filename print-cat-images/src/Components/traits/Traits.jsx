@@ -18,7 +18,6 @@ const Traits = ( id ) => {
             setBreed(data)
         }    
         fetchData()
-        console.log(breed)
         statsChange()
     }, [id] )
 
